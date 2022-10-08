@@ -90,7 +90,22 @@ public class Main {
         System.out.println(catTreeSet);
 
 
+        Map<Integer, String> countryMap = new HashMap<>();
+        countryMap.clear();
+        countryMap.put(1, "Russia");
+        countryMap.put(2, "Kazakhstan");
+        countryMap.put(3, "Turkey");
+        countryMap.put(4, "China");
 
+        System.out.println(countryMap.keySet());
+        countryMap.remove(2);
+
+        for (Map.Entry<Integer, String> item: countryMap.entrySet()){
+            System.out.printf("| Key: %d | Value: %s \n", item.getKey(), item.getValue());
+        }
+
+        String first = countryMap.get(2);
+        System.out.println(first);
 
     }
 }
