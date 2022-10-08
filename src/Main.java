@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -72,6 +69,27 @@ public class Main {
             list.add(2000000, Integer.MAX_VALUE);
         }
         System.out.println("Time of work ArrayList ms "+(System.currentTimeMillis()-start));
+
+
+        Set<String> country = new HashSet<>();
+        country.add("Russia");
+        country.add("Kazakhstan");
+        country.add("Turkey");
+
+        boolean isAdded = country.add("Turkey");
+        System.out.println("Turkey is added "+isAdded);
+        System.out.println("Set contains: "+ country.size());
+        System.out.println(country);
+        country.remove("Kazakhstan");
+        System.out.println(country);
+
+
+        HashSet<Cat> catHashSet = new HashSet<>(catsList);
+        System.out.println(catHashSet);
+        TreeSet<Cat> catTreeSet = new TreeSet<>(catsList);
+        System.out.println(catTreeSet);
+
+
 
 
     }
