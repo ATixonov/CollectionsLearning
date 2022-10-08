@@ -39,5 +39,17 @@ public class Main {
         futureInfo.remove(1);
         System.out.println(futureInfo);
 
+        LinkedList<Car> cars = new LinkedList<>();
+        Car lada = new Car("Granta");
+        Car volga = new Car("Syber");
+        Car kamaz = new Car("Labaz");
+
+        cars.addAll(Arrays.asList(lada, volga, kamaz));
+        System.out.println(cars);
+
+        cars.addFirst(new Car("Daewoo Nexia"));
+        cars.addLast(new Car("Zaporozhec"));
+        System.out.println(cars);
+
     }
 }
